@@ -1,13 +1,14 @@
+import Caracteristica from "@/components/caracteristica/Caracteristica";
+
 export default function CaracteristicasPage() {
-  
   const caracteristicas = [
-    'Componentes, funções que retornam JSX.',
-    'Componentes Reutilizáveis e Modulares.',
-    'Roteamento Automático e APIs.',
-    'Hooks: useState, useEffect e useSWR.',
-    'Renderização Rápida e SEO Friendly.',
-    'TypeScript Seguro e Escalável.',
-    'Comunidade Ativa e Popularidade.'
+    "Componentes, funções que retornam JSX.",
+    "Componentes Reutilizáveis e Modulares.",
+    "Roteamento Automático e APIs.",
+    "Hooks: useState, useEffect e useSWR.",
+    "Renderização Rápida e SEO Friendly.",
+    "TypeScript Seguro e Escalável.",
+    "Comunidade Ativa e Popularidade."
   ];
 
   return (
@@ -15,10 +16,9 @@ export default function CaracteristicasPage() {
       <h2>Características do React e Next.js</h2>
 
       <ul>
-        
-        {caracteristicas.map((caracteristica, i) => {
-          return <li key={i}>{caracteristica}</li>
-        })}
+        {caracteristicas.map((texto, i) => (
+          <Caracteristica key={i} index={i} texto={texto} />
+        ))}
       </ul>
     </>
   );
