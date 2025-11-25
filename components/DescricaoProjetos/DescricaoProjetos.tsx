@@ -1,16 +1,17 @@
 import Link from 'next/link';
-import Projeto from '@components/Projeto/Projeto';
-function DescricaoProjetos(){
 
-    return(
-        <>
-        <h2>Projetos</h2>
-        <p>Ja fiz varios projetos</p>
-        <p>visire o meu <link href="" /></p>
+export default function DescricaoProjetos() {
+  return (
+    <>
+      <h2>Projetos</h2>
+      <p>Já fiz vários projetos</p>
 
-
-
-
-        </>
-    )
+      <p>
+        Visite o meu{' '}
+        <Link href="">
+          projeto
+        </Link>
+      </p>
+    </>
+  );
 }
