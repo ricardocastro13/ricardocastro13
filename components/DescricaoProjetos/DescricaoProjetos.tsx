@@ -8,9 +8,10 @@ export default function DescricaoProjetos() {
 
       <p>
         Visite o meu{' '}
-        <Link href="">
-          projeto
+        <Link href="https://ricardocastro13.github.io" >
+          site
         </Link>
+        .
       </p>
     </>
   );
