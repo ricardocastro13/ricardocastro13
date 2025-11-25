@@ -1,4 +1,3 @@
-
 import tecnologias from '@/app/data/tecnologias.json';
 import Tecnologia from '@/components/tecnologia/tecnologia';
 
@@ -11,7 +10,7 @@ export default function TecnologiasPage() {
         {tecnologias.map((tec, i) => {
           return (
             <Tecnologia
-              key={i}
+              key={i}                
               title={tec.title}
               image={tec.image}
               description={tec.description}
