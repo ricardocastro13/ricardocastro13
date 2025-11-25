@@ -1,0 +1,86 @@
+[
+  {
+    "title": "HTML",
+    "image": "/tecnologias/html.svg",
+    "description": "Linguagem de marcação para a estrutura de páginas web.",
+    "rating": 7
+  },
+  {
+    "title": "CSS",
+    "image": "/tecnologias/css.svg",
+    "description": "Linguagem de estilo para design de páginas web.",
+    "rating": 5
+  },
+  {
+    "title": "Tailwind CSS",
+    "image": "/tecnologias/tailwind.svg",
+    "description": "Framework CSS utility-first para estilização rápida.",
+    "rating": 5
+  },
+  {
+    "title": "JavaScript",
+    "image": "/tecnologias/javascript.svg",
+    "description": "Linguagem de programação para interatividade web.",
+    "rating": 4
+  },
+  {
+    "title": "TypeScript",
+    "image": "/tecnologias/typescript.svg",
+    "description": "JavaScript com tipagem estática para maior segurança.",
+    "rating": 4
+  },
+  {
+    "title": "JSON",
+    "image": "/tecnologias/json.svg",
+    "description": "Formato leve de troca de dados (JavaScript Object Notation).",
+    "rating": 5
+  },
+  {
+    "title": "API RESTful",
+    "image": "/tecnologias/api.svg",
+    "description": "Interface de comunicação entre sistemas usando HTTP.",
+    "rating": 4
+  },
+  {
+    "title": "Swagger",
+    "image": "/tecnologias/swagger.svg",
+    "description": "Ferramenta para documentar e testar APIs.",
+    "rating": 5
+  },
+  {
+    "title": "GitHub",
+    "image": "/tecnologias/github.svg",
+    "description": "Plataforma de alojamento de código e colaboração.",
+    "rating": 7
+  },
+  {
+    "title": "Codespaces",
+    "image": "/tecnologias/codespaces.svg",
+    "description": "Ambiente de desenvolvimento completo na nuvem.",
+    "rating": 7
+  },
+  {
+    "title": "GitHub Pages",
+    "image": "/tecnologias/github-pages.svg",
+    "description": "Hospedagem gratuita de sites estáticos.",
+    "rating": 7
+  },
+  {
+    "title": "React.js",
+    "image": "/tecnologias/react.svg",
+    "description": "Biblioteca JavaScript para criar interfaces de utilizador.",
+    "rating": 5
+  },
+  {
+    "title": "Next.js",
+    "image": "/tecnologias/next.svg",
+    "description": "Framework React com renderização híbrida e rotas.",
+    "rating": 5
+  },
+  {
+    "title": "Vercel",
+    "image": "/tecnologias/vercel.svg",
+    "description": "Plataforma de cloud para frontend e deploy do Next.js.",
+    "rating": 5
+  }
+]
