@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Link from 'next/link'; 
+import Link from "next/link";
+import Relogio from "../components/Relogio/page";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,7 +24,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  
   const data = new Date();
 
   return (
@@ -31,8 +31,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col justify-start gap-4 p-20 items-center min-h-screen`}
       >
-        
-       
         <header className="flex flex-col items-center">
           <h1>React & Next.js</h1>
           <nav className="flex gap-4">
@@ -42,14 +40,17 @@ export default function RootLayout({
             <Link href="/tecnologias">Tecnologias</Link>
             <Link href="/projetos">Projetos</Link>
             <Link href="/contador">Contador</Link>
+            <Link href="/input">Input</Link>
           </nav>
         </header>
-        
+
         <main className="bg-blue-200 p-5 rounded-2xl max-w-2xl min-h-[70vh]">
           {children}
         </main>
-        
-        <footer>DIW {data.getFullYear()}</footer>
+
+        <footer>
+          DIW {data.getFullYear()} — hora atual: <Relogio />
+        </footer>
       </body>
     </html>
   );

@@ -1,4 +1,5 @@
-import Image from 'next/image';
+import Image from "next/image";
+import ContadorPersonalizado from "@/components/contadorPersonalizado/contadorPersonalizado";
 
 interface TecnologiaProps {
   title: string;
@@ -14,6 +15,7 @@ export default function Tecnologia({ title, image, description, rating }: Tecnol
       <h3 className="text-xl font-bold mt-4">{title}</h3>
       <p className="text-gray-600 text-sm my-2">{description}</p>
       <div className="text-yellow-500 font-bold mt-auto">Rating: {rating} ★</div>
+      <ContadorPersonalizado title={title} />
     </div>
   );
 }
