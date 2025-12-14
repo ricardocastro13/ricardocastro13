@@ -34,7 +34,7 @@ export default function Contador() {
       let novo = anterior + delta;
 
       // limite [0, 10]
-      if (novo < 0) novo = 0;
+      if (novo < 0) novo = 2;
       if (novo > 10) novo = 10;
 
       if (novo !== anterior) {
