@@ -4,6 +4,7 @@ import { Produto } from "@/models/interfaces"
 import useSWR from "swr"
 import ProdutoCard from "@/components/ProdutoCard/Page"
 import { useEffect, useState } from "react"
+import Link from "next/link"
 
 const fetcher = async (url: string): Promise<Produto[]> => {
   const res = await fetch(url)
@@ -20,12 +21,6 @@ export default function DEISIProdutosPage() {
   const [filteredData, setFilteredData] = useState<Produto[]>([])
 
   const [cart, setCart] = useState<Produto[]>([])
-
-  const [student, setStudent] = useState(false)
-  const [coupon, setCoupon] = useState("")
-  const [buying, setBuying] = useState(false)
-  const [buyError, setBuyError] = useState("")
-  const [buyResult, setBuyResult] = useState<any>(null)
 
   useEffect(() => {
     const raw = localStorage.getItem("cart")
@@ -66,44 +61,8 @@ export default function DEISIProdutosPage() {
 
   const total = cart.reduce((acc, p) => acc + Number(p.price), 0)
 
-  function comprar() {
-    setBuyError("")
-    setBuyResult(null)
-    setBuying(true)
-
-    fetch("https://deisishop.pythonanywhere.com/buy", {
-      method: "POST",
-      body: JSON.stringify({
-        products: cart.map((p) => p.id),
-        name: "",
-        student: student,
-        coupon: coupon,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => {
-        if (!response.ok) throw new Error(response.statusText)
-        return response.json()
-      })
-      .then((response) => {
-        setBuyResult(response)
-        setCart([])
-        localStorage.setItem("cart", "[]")
-        setCoupon("")
-        setStudent(false)
-      })
-      .catch((e) => {
-        setBuyError(e.message || "Erro ao processar a compra")
-      })
-      .finally(() => {
-        setBuying(false)
-      })
-  }
-
   if (error) return <p>{(error as Error).message}</p>
-  if (isLoading || !data) return <p>A carregar produtos ....</p>
+  if (isLoading || !data) return <p>A carregar produtos...</p>
 
   return (
     <div className="space-y-8">
@@ -143,51 +102,18 @@ export default function DEISIProdutosPage() {
 
         <p className="mb-4 font-bold">Total: €{total.toFixed(2)}</p>
 
+        <Link href="/comprar" className="inline-block px-4 py-2 bg-black text-white rounded-lg mb-4">
+          Ir para Comprar
+        </Link>
+
         {cart.length === 0 ? (
           <p>Carrinho vazio.</p>
         ) : (
-          <>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {cart.map((produto) => (
-                <ProdutoCard key={produto.id} produto={produto} onRemover={removerDoCarrinho} />
-              ))}
-            </div>
-
-            <div className="mt-6 space-y-4">
-              <label className="flex items-center gap-2">
-                <input
-                  type="checkbox"
-                  checked={student}
-                  onChange={(e) => setStudent(e.target.checked)}
-                />
-                Estudante DEISI
-              </label>
-
-              <input
-                type="text"
-                value={coupon}
-                onChange={(e) => setCoupon(e.target.value)}
-                placeholder="Cupão de desconto"
-                className="border rounded-md p-2 w-full max-w-md"
-              />
-
-              <button
-                onClick={comprar}
-                disabled={buying || cart.length === 0}
-                className="px-6 py-2 bg-black text-white rounded-lg disabled:opacity-50"
-              >
-                {buying ? "A comprar..." : "Comprar"}
-              </button>
-
-              {buyError ? <p className="text-red-600">{buyError}</p> : null}
-
-              {buyResult ? (
-                <pre className="bg-white border rounded-lg p-4 overflow-auto">
-                  {JSON.stringify(buyResult, null, 2)}
-                </pre>
-              ) : null}
-            </div>
-          </>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {cart.map((produto) => (
+              <ProdutoCard key={produto.id} produto={produto} onRemover={removerDoCarrinho} />
+            ))}
+          </div>
         )}
       </div>
     </div>
