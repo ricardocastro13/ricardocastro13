@@ -99,7 +99,7 @@ export default function DEISIProdutosPage() {
           ))}
         </div>
 
-        {filteredData.length === 0 ? <p className="mt-6">Sem resultados.</p> : null}
+        {filteredData.length === 0 ? <p className="mt-6">Sem resultadoss.</p> : null}
       </div>
 
       <div>
