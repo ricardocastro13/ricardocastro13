@@ -63,7 +63,7 @@ export default function DEISIProdutosPage() {
   const total = cart.reduce((acc, p) => acc + Number(p.price), 0)
 
   if (error) return <p>{(error as Error).message}</p>
-  if (isLoading || !data) return <p>A carregar produtos...</p>
+  if (isLoading || !data) return <p>A carregar produtos ...</p>
 
   return (
     <div className="space-y-8">
