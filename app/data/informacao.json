@@ -1,0 +1,14 @@
+[
+  { "id": 1, "titulo": "Inception", "ano": 2010, "genero": "Sci-Fi", "nota": 8.8 },
+  { "id": 2, "titulo": "The Dark Knight", "ano": 2008, "genero": "Ação", "nota": 9.0 },
+  { "id": 3, "titulo": "Interstellar", "ano": 2014, "genero": "Sci-Fi", "nota": 8.6 },
+  { "id": 4, "titulo": "Parasite", "ano": 2019, "genero": "Drama", "nota": 8.5 },
+  { "id": 5, "titulo": "Spirited Away", "ano": 2001, "genero": "Animação", "nota": 8.6 },
+  { "id": 6, "titulo": "The Godfather", "ano": 1972, "genero": "Crime", "nota": 9.2 },
+  { "id": 7, "titulo": "Pulp Fiction", "ano": 1994, "genero": "Crime", "nota": 8.9 },
+  { "id": 8, "titulo": "The Matrix", "ano": 1999, "genero": "Sci-Fi", "nota": 8.7 },
+  { "id": 9, "titulo": "Fight Club", "ano": 1999, "genero": "Drama", "nota": 8.8 },
+  { "id": 10, "titulo": "The Shawshank Redemption", "ano": 1994, "genero": "Drama", "nota": 9.3 },
+  { "id": 11, "titulo": "Cidade de Deus", "ano": 2002, "genero": "Crime", "nota": 8.6 },
+  { "id": 12, "titulo": "Gladiator", "ano": 2000, "genero": "Ação", "nota": 8.5 }
+]

@@ -10,7 +10,7 @@ export default function Relogio() {
       setHora(new Date().toLocaleTimeString());
     }, 1000);
 
-    // cleanup – para parar o intervalo quando o componente sai da página
+   
     return () => clearInterval(id);
   }, []);
 

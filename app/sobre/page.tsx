@@ -1,12 +1,26 @@
-export default function Page() {
-  return (
-    <>
-      <h2>Desenvolvimento Web Moderno</h2>
-      <ul>
-        <li>React e Next.js revolucionaram a criação de interfaces web.</li>
-        <li>São usados por empresas como Facebook, Netflix e Airbnb.</li>
-        <li>Dominar estas tecnologias abre muitas oportunidades!</li>
-      </ul>
-    </>
-  )
+export default function Page(){
+  <>
+
+  <h1>desenvolvimento web moderno</h1>
+
+  <ul>
+
+    <li> react e next.js revolucionaram</li>
+    <li>sao usados por empresas  como facebook</li>
+  </ul>
+  
+  
+  
+  
+  
+  
+  </>
+
+
+
+
+
+
+
+
 }

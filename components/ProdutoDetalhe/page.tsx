@@ -1,5 +1,5 @@
 "use client"
-
+// ja importado o produto para nao estar sempre a repetir o codigo
 import { Produto } from "@/models/interfaces"
 
 export default function ProdutoDetalhe({ produto }: { produto: Produto }) {

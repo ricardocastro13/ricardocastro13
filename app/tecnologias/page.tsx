@@ -3,10 +3,10 @@ import Tecnologia from '@/components/tecnologia/tecnologia';
 
 export default function TecnologiasPage() {
   return (
-    <div className="flex flex-col items-center p-10">
-      <h2 className="text-3xl font-bold mb-8">Tecnologias Exploradas</h2>
+    <div >
+      <h2> Tecnologias Exploradas</h2>
 
-      <div className="flex flex-wrap justify-center gap-6">
+      <div>
         {tecnologias.map((tec, i) => {
           return (
             <Tecnologia

@@ -1,3 +1,5 @@
+// todos os exports para ser mais facil e organizado importar em outras partes da app
+
 export interface Produto {
   id: number;
   title: string;
