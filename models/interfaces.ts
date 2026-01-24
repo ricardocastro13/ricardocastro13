@@ -16,3 +16,11 @@ export interface Rating {
   count: number;
 }
 
+export interface JogadorInterface {
+  nome: string;
+  idade: number;
+  posicao: string;
+  golos: number;
+  assistencias: number;
+  nacionalidade: string;
+}
